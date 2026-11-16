@@ -1,15 +1,60 @@
-# Your distro. Change anything here, commit, and GitHub Actions builds it.
-# Every option is explained at
-# https://docs.linuxlive.com/spec/reference/
+# wintheus, made with the linuxlive.com wizard on 2026-11-16.
+# Build it in your own GitHub from https://github.com/Eric-Ness/linuxlive-distro (see README.md)
 schema_version: 1
-name: My Distro          # up to 40 characters; shown in the boot menu and About screen
-version: "0.1"           # keep the quotes
-base: ubuntu             # ubuntu or fedora
-desktop: cinnamon        # gnome, kde or cinnamon
-apps:                    # from Flathub; app ids: https://docs.linuxlive.com/spec/catalog/
+name: "wintheus"
+version: "6.7"
+base: ubuntu
+desktop: cinnamon
+apps:
   - firefox
+  - libreoffice
   - vlc
+  - blender
+  - discord
+  - tuxpaint
+  - lutris
+  - krita
+  - gimp
+  - steam
+  - heroic
+  - gcompris
+  - vscode
+  - chromium
+flathub:
+  - com.google.Chrome
+  - io.github.ungoogled_software.ungoogled_chromium
 branding:
-  wallpaper: assets/wallpaper.png   # PNG, at least 1280x720, with one strong colour
-  logo: assets/logo.png             # square PNG of 128, 256 or 512 pixels
-  accent_color: "#c2185b"           # used by KDE and GNOME; keep the quotes
+  wallpaper: assets/wallpaper.png
+  logo: assets/logo.png
+  accent_color: "#00838f"
+  splash:
+    script: assets/splash/splash.script
+    images:
+      - assets/splash/splash.png
+settings:
+  language: pt_BR
+  keyboard: "br"
+  timezone: America/Sao_Paulo
+  hostname: wintheus
+  autologin: true
+  dock:
+    - firefox
+    - libreoffice
+    - vlc
+    - blender
+    - discord
+    - tuxpaint
+    - lutris
+    - com.google.Chrome
+firefox:
+  homepage: "https://www.google.com.br"
+persistence: true
+# Your own additions. Scripts and repos run as root; read them before you share the distro.
+packages:
+  - gparted
+  - pavucontrol
+  - vlc
+  - gimp
+  - mousepad
+  - file-roller
+  - htop
