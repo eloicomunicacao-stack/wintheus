@@ -1,0 +1,7 @@
+# WINTHEUS Plymouth: imagem de inicializacao centralizada e redimensionada
+splash = Image("splash.png");
+splash = splash.Scale(Window.GetWidth(), Window.GetHeight());
+background = Sprite(splash);
+background.SetX(0);
+background.SetY(0);
+background.SetZ(-100);
