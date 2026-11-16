@@ -5,3 +5,4 @@ background = Sprite(splash);
 background.SetX(0);
 background.SetY(0);
 background.SetZ(-100);
+assets/splash/splash.png
